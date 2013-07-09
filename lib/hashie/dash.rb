@@ -1,8 +1,8 @@
 module Hashie
   class Dash < Hash
     def self.property(name, params = {})
-      @defaults = {}
-      @requires = {}
+      @defaults ||= {}
+      @requires ||= {}
       
       define_method(name) do 
         self[name]
@@ -27,7 +27,7 @@ module Hashie
     end
 
     def self.requires
-      @requires 
+      @requires
     end
 
     def initialize(args)
