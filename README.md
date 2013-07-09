@@ -27,3 +27,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+[![Code Climate](https://codeclimate.com/repos/51dbca00f3ea002d1f0030f8/badges/a309dd9d03d5c412eb69/gpa.png)](https://codeclimate.com/repos/51dbca00f3ea002d1f0030f8/feed)
+
+[![Coverage Status](https://coveralls.io/repos/PanfilovDenis/hashie/badge.png)](https://coveralls.io/r/PanfilovDenis/hashie)
