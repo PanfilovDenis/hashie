@@ -3,14 +3,6 @@ module Hashie
     def self.property(name, params = {})
       @defaults ||= {}
       @requires ||= {}
-      
-      define_method(name) do 
-        self[name]
-      end
-
-      define_method("#{name}=") do |value|
-        self[name] = value
-      end
 
       if params.key?(:default)
          @defaults[name] = params[:default]
@@ -18,6 +10,15 @@ module Hashie
 
       if params.key?(:required) && params[:required]
         @requires[name] = true
+      end
+
+      define_method(name) do 
+        self[name]
+      end
+
+      define_method("#{name}=") do |value|
+        raise ArgumentError if value.nil? && @requires.key?(name)
+        self[name] = value
       end
 
     end
@@ -40,7 +41,7 @@ module Hashie
        end
 
       self.class.requires.each do |key, value|
-        raise ArgumentError if self[key] == nil
+        raise ArgumentError if self[key].nil?
       end
 
     end

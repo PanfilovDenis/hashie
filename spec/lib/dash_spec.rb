@@ -25,4 +25,8 @@ describe Hashie::Dash do
     expect {Person.new({})}.to raise_error
   end
 
+  it 'should be raise exeption if set nil' do
+    expect {@person.name = nil}.to raise_error
+  end
+
 end
