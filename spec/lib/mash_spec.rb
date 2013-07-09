@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Hashie do
+describe Hashie::Mash do
 
   before(:each) do
     @mash = Hashie::Mash.new
