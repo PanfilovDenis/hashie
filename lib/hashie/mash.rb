@@ -2,8 +2,8 @@ module Hashie
   class Mash < Hash
     def method_missing(method_name, *args, &block)
       
-      type = method_name[-1]
-      method = method_name.to_s.chomp("=").chomp("?").to_sym
+      type = extract_type(method_name)
+      method = get_method_name(method_name)
 
       case type
       when "="
@@ -24,6 +24,17 @@ module Hashie
 
     def respond_to_missing?(name, include_private = false)
       true
+    end
+
+    private 
+
+    def extract_type(method_name)
+      #TODO решение влоб, надо написать регулярку
+      method_name[-1]
+    end
+
+    def get_method_name(method_name)
+      method_name.to_s.chomp("=").chomp("?").to_sym
     end
 
   end
