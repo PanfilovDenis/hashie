@@ -4,26 +4,24 @@ describe Hashie do
 
   before(:each) do
     @mash = Hashie::Mash.new
+    @value = "test"
+    @mash.defined_value = @value
   end
 
   it 'should be get nil if undefined key' do
-    expect(nil).to eq(@mash.undefined)
+    expect(nil).to eq(@mash.undefined_value)
   end
 
   it 'should be set and get value' do
-    value = "test"
-    @mash.defined = value
-    expect(value).to eq(@mash.defined)
+    expect(@value).to eq(@mash.defined_value)
   end
 
   it 'should be get false if undefined key' do
-    expect(false).to eq(@mash.undefined?)
+    expect(false).to eq(@mash.undefined_value?)
   end
 
   it 'should be get true if defined key' do
-    value = "test"
-    @mash.defined = value
-    expect(true).to eq(@mash.defined?)
+    expect(true).to eq(@mash.defined_value?)
   end
 
 end
