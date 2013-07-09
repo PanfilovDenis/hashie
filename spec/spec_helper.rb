@@ -1,6 +1,7 @@
 require 'rspec'
 require 'hashie'
 
+Dir["./spec/support/**/*.rb"].each {|f| require f}
 
 if ENV['TRAVIS']
   require 'coveralls'

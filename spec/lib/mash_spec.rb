@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Hashie::Mash do
 
   before(:each) do
+    p = Person.new
     @mash = Hashie::Mash.new
     @value = "test"
     @mash.defined_value = @value
