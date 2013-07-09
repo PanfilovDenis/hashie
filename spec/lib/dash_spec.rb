@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Hashie::Mash do
+describe Hashie::Dash do
   before(:each) do
   	@name = "Stasia"
   	@new_name = "Lopatina"
@@ -18,9 +18,11 @@ describe Hashie::Mash do
   end
 
   it 'should be set default value' do
-  	raise @person.ololo.inspect
     expect(@default).to eq(@person.occupation)
   end
 
+  it 'should be raise exeption' do
+    expect {Person.new({})}.to raise_error
+  end
 
 end
