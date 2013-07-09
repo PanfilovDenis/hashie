@@ -32,3 +32,5 @@ TODO: Write usage instructions here
 
 
 [![Coverage Status](https://coveralls.io/repos/PanfilovDenis/hashie/badge.png)](https://coveralls.io/r/PanfilovDenis/hashie)
+
+[![Build Status](https://travis-ci.org/PanfilovDenis/hashie.png)](https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME])
