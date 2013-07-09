@@ -1,5 +1,6 @@
-class Person < Dash
+class Person < Hashie::Dash
   property :name, required: true
   property :email
   property :occupation, default: 'Rubyist'
-end
+  property :ololo, default: 'Mimimi'
+end	
